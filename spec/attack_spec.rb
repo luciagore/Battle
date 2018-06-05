@@ -1,4 +1,4 @@
-require './attack'
+require './lib/attack'
 
 describe Attack do
   subject(:object) { described_class }

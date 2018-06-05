@@ -1,7 +1,7 @@
 require 'sinatra/base'
-require './game'
-require './player'
-require './attack'
+require './lib/game'
+require './lib/player'
+require './lib/attack'
 
 class Battle < Sinatra::Base
   enable :sessions
