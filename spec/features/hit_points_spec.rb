@@ -1,12 +1,18 @@
-feature 'hit player' do
-  scenario 'shows hit points' do
+feature 'View hit points' do
+
+  # As Player 1,
+  # So I can see how close I am to winning
+  # I want to see Player 2's Hit Points
+  scenario 'see Player 2 hit points' do
     sign_in_and_play
-    expect(page).to have_content "Ben: 60HP"
-    click_link 'Attack'
+    expect(page).to have_content 'Ben: 60HP'
   end
-  scenario 'shows hit points at the end of the game' do
+
+  # As Player 1,
+  # So I can see how close I am to losing,
+  # I want to see my own hit points
+  scenario 'see Player 1 hit points' do
     sign_in_and_play
-    click_link 'Attack'
-    expect(page).to have_content "Ben: 50HP"
+    expect(page).to have_content 'Lucy: 60HP'
   end
 end
